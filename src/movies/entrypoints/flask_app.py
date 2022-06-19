@@ -11,11 +11,11 @@ content = Blueprint("rec", __name__, template_folder="templates/")
 def hello_world():
     return "Hello World!", 200
 
-@app.route("/rec")
+@app.route("/")
 def display_recommendations():
     return render_template('rec.html')
 
-@app.route("/rec", methods=['POST'])
+@app.route("/", methods=['POST'])
 def form_post():
     username = request.form['username']
     p1 = request.form.get('p1')
