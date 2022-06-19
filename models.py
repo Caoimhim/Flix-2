@@ -30,8 +30,8 @@ Base = declarative_base(
 
 engine = create_engine(
     get_postgres_uri(),
+    connect_args={'ssl_context': True},
     isolation_level="REPEATABLE READ",
-    connect_args={'ssl_context': True}
 )
 
 
