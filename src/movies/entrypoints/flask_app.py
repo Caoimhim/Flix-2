@@ -38,7 +38,7 @@ def form_post():
 
     if len(rec_list) == 0:
         initiate_database.main()
-        rec_list = rec_res.run_algorithm()
+        rec_list = form_verifier.orderPrefs(order, pref)
         for i in rec_list:
             rec_list_titles.append(i.movie_title)
 
